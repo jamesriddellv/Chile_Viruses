@@ -1,0 +1,80 @@
+### SETUP ###
+
+# log on to chile supercomputer and transfer data files
+
+# (base) [mathomics1@leftraru1 TARA_CHILE]$ pwd
+# /home/mathomics1/TARA_CHILE
+# (base) [mathomics1@leftraru1 TARA_CHILE]$ rsync -avz all_fasta riddell26@pitzer.osc.edu:/fs/ess/PAS1117/riddell26/Chile_Viruses # had to be run multiple times due to idling and large file sizes
+# all_fasta/
+# ...
+# all_fasta/S9_Z03_fixed.fasta.tar.gz
+# all_fasta/S9_Z05_fixed.fasta.tar.gz
+# all_fasta/md5sum_non-tar.tsv
+# all_fasta/md5sum_tar.tsv
+# 
+# sent 36,111,981,565 bytes  received 837 bytes  10,600,904.86 bytes/sec
+# total size is 147,795,753,579  speedup is 4.09
+
+# log on to OSC
+
+# cd /fs/ess/PAS1117/riddell26/Chile_Viruses
+
+# mkdir data
+# mv all_fasta data
+
+# cd data/all_fasta
+
+# md5sum -c md5sum_tar.tsv
+
+# cd ../../
+
+# mkdir scripts
+# mkdir scripts/slurm_outputs
+# mkdir processed-data
+
+# ls -1 data/all_fasta/ | sed 's/.fasta.tar.gz//' > assemblies.conf
+
+### RUNSCRIPT ####
+
+
+# List of job script names
+JOB_SCRIPTS=(\
+"run_vs2_pass1_slurm.sh" \
+"run_checkv_slurm.sh \
+"run_vs2_pass2_slurm.sh" \
+"run_dramv_slurm.sh" \
+"vs2_sop_screen.sh" \
+"cluster_vOTUs.sh")
+
+# Loop through the job scripts and submit each one
+for script in "${JOB_SCRIPTS[@]}"; do
+    sbatch "$script"
+done
+
+mv slurm-* slurm_outputs
+
+cd ../processed-data/vOTU-clustering
+bash add_chile_prefix.sh
+cd ../../scripts/
+sbatch cluster_chile_GOV2_combined.sh
+wait
+
+cd ../
+
+# get contig lengths (stored in length.sh)
+perl /fs/project/PAS1117/Global_AMGs/scripts/lengthcont.pl \
+processed-data/vOTU-clustering/combined-final-viral-scored.fa.self-blastn.clusters.fna  \
+> processed-data/vOTU-clustering/chile-vOTUs.length
+
+perl /fs/project/PAS1117/Global_AMGs/scripts/lengthcont.pl \
+processed-data/vOTU-clustering/combined-final-viral-scored.fa \
+> processed-data/vOTU-clustering/combined-final-viral-scored.length
+
+cd processed-data/vOTU-clustering/
+
+bash get_contig_stats.sh combined-final-viral-scored.fa combined-final-viral-scored.length > unclustered-length-stats.txt
+bash combined-final-viral-scored.fa.self-blastn.clusters.fna chile-vOTUs.length > vOTU-length-stats.txt
+
+
+
+

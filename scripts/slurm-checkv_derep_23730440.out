@@ -1,0 +1,35 @@
+WARNING: Environment variable LD_PRELOAD already has value [], will not forward new value [/apps/xalt/xalt/lib64/libxalt_init.so] from parent process environment
+Create self BLAST database
+
+
+Building a new DB, current time: 08/30/2023 17:01:47
+New DB name:   /fs/ess/PAS1117/riddell26/Chile_Viruses/processed-data/vOTU-clustering/combined-final-viral-scored.fa.db
+New DB title:  ../processed-data/vOTU-clustering/combined-final-viral-scored.fa
+Sequence type: Nucleotide
+Deleted existing Nucleotide BLAST database named /fs/ess/PAS1117/riddell26/Chile_Viruses/processed-data/vOTU-clustering/combined-final-viral-scored.fa.db
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 404664 sequences in 32.201 seconds.
+
+
+Calculating pairwise ANI
+Running clustering on ../processed-data/vOTU-clustering/combined-final-viral-scored.fa.self-blastn.ani.tsv using aniclust.py
+
+reading sequences...
+404664 sequences retained from fna
+time: 19.91 seconds, peak RAM: 0.12 GB
+
+storing edges...
+1623239 edges retained from blastani
+1623239 edges currently stored
+time: 177.1 seconds, peak RAM: 0.31 GB
+
+clustering...
+158273 total clusters
+time: 177.51 seconds, peak RAM: 0.33 GB
+
+writing clusters...
+time: 177.6 seconds, peak RAM: 0.33 GB
+Parsing clusters: Building list of representatives
+Parsing clusters: Writing 158273 records to f../processed-data/vOTU-clustering/combined-final-viral-scored.fa.self-blastn.clusters.fna
+Dereplicated 404664 sequences into 158273 cluster representatives

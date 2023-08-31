@@ -1,0 +1,35 @@
+WARNING: Environment variable LD_PRELOAD already has value [], will not forward new value [/apps/xalt/xalt/lib64/libxalt_init.so] from parent process environment
+Create self BLAST database
+
+
+Building a new DB, current time: 08/30/2023 18:35:51
+New DB name:   /fs/ess/PAS1117/riddell26/Chile_Viruses/processed-data/vOTU-clustering/chile_GOV2_combined/chile_GOV2_combined_vOTUs.fna.db
+New DB title:  ../processed-data/vOTU-clustering/chile_GOV2_combined_vOTUs.fna
+Sequence type: Nucleotide
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 675557 sequences in 56.7574 seconds.
+
+
+Running all-verses-all pairwise BLAST
+Calculating pairwise ANI
+Running clustering on ../processed-data/vOTU-clustering/chile_GOV2_combined/chile_GOV2_combined_vOTUs.fna.self-blastn.ani.tsv using aniclust.py
+
+reading sequences...
+675557 sequences retained from fna
+time: 13.61 seconds, peak RAM: 0.19 GB
+
+storing edges...
+48439 edges retained from blastani
+48439 edges currently stored
+time: 256.52 seconds, peak RAM: 0.24 GB
+
+clustering...
+645116 total clusters
+time: 257.56 seconds, peak RAM: 0.29 GB
+
+writing clusters...
+time: 257.97 seconds, peak RAM: 0.29 GB
+Parsing clusters: Building list of representatives
+Parsing clusters: Writing 645116 records to f../processed-data/vOTU-clustering/chile_GOV2_combined/chile_GOV2_combined_vOTUs.fna.self-blastn.clusters.fna
+Dereplicated 675557 sequences into 645116 cluster representatives

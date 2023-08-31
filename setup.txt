@@ -1,0 +1,186 @@
+# All commands run to set up directory and validate
+
+(base) [mathomics1@leftraru1 TARA_CHILE]$ pwd
+/home/mathomics1/TARA_CHILE
+(base) [mathomics1@leftraru1 TARA_CHILE]$ rsync -avz all_fasta riddell26@pitzer.osc.edu # had to be run multiple times due to idling and large file sizes
+sending incremental file list
+all_fasta/
+...
+all_fasta/S9_Z03_fixed.fasta.tar.gz
+all_fasta/S9_Z05_fixed.fasta.tar.gz
+all_fasta/md5sum_non-tar.tsv
+all_fasta/md5sum_tar.tsv
+
+sent 36,111,981,565 bytes  received 837 bytes  10,600,904.86 bytes/sec
+total size is 147,795,753,579  speedup is 4.09
+
+
+(base) [riddell26@pitzer-login03 all_fasta]$ md5sum -c md5sum_tar.tsv
+S10_Z00_fixed.fasta.tar.gz: OK
+S10_Z01_fixed.fasta.tar.gz: OK
+S10_Z03_fixed.fasta.tar.gz: OK
+S10_Z05_fixed.fasta.tar.gz: OK
+S11_Z00_fixed.fasta.tar.gz: OK
+S11_Z01_fixed.fasta.tar.gz: OK
+S11_Z03_fixed.fasta.tar.gz: OK
+S11_Z05_fixed.fasta.tar.gz: OK
+S12_Z00_fixed.fasta.tar.gz: OK
+S12_Z03_fixed.fasta.tar.gz: OK
+S12_Z05_fixed.fasta.tar.gz: OK
+S13_Z00_fixed.fasta.tar.gz: OK
+S13_Z01_fixed.fasta.tar.gz: OK
+S13_Z03_fixed.fasta.tar.gz: OK
+S13_Z07_fixed.fasta.tar.gz: OK
+S13_Z09_fixed.fasta.tar.gz: OK
+S14_Z00_fixed.fasta.tar.gz: OK
+S14_Z01_fixed.fasta.tar.gz: OK
+S14_Z03_fixed.fasta.tar.gz: OK
+S14_Z05_fixed.fasta.tar.gz: OK
+S14_Z07_fixed.fasta.tar.gz: OK
+S14_Z09_fixed.fasta.tar.gz: OK
+S15_Z00_fixed.fasta.tar.gz: OK
+S15_Z01_fixed.fasta.tar.gz: OK
+S15_Z03_fixed.fasta.tar.gz: OK
+S15_Z05_fixed.fasta.tar.gz: OK
+S15_Z07_fixed.fasta.tar.gz: OK
+S16_Z00_fixed.fasta.tar.gz: OK
+S16_Z01_fixed.fasta.tar.gz: OK
+S16_Z03_fixed.fasta.tar.gz: OK
+S16_Z05_fixed.fasta.tar.gz: OK
+S16_Z07_fixed.fasta.tar.gz: OK
+S17_Z00_fixed.fasta.tar.gz: OK
+S17_Z01_fixed.fasta.tar.gz: OK
+S17_Z03_fixed.fasta.tar.gz: OK
+S17_Z05_fixed.fasta.tar.gz: OK
+S17_Z07_fixed.fasta.tar.gz: OK
+S17_Z09_fixed.fasta.tar.gz: OK
+S18_Z00_fixed.fasta.tar.gz: OK
+S18_Z01_fixed.fasta.tar.gz: OK
+S18_Z03_fixed.fasta.tar.gz: OK
+S18_Z05_fixed.fasta.tar.gz: OK
+S18_Z07_fixed.fasta.tar.gz: OK
+S18_Z09_fixed.fasta.tar.gz: OK
+S19_Z00_fixed.fasta.tar.gz: OK
+S19_Z01_fixed.fasta.tar.gz: OK
+S19_Z03_fixed.fasta.tar.gz: OK
+S19_Z05_fixed.fasta.tar.gz: OK
+S19_Z07_fixed.fasta.tar.gz: OK
+S19_Z09_fixed.fasta.tar.gz: OK
+S1_Z00_fixed.fasta.tar.gz: OK
+S1_Z01_fixed.fasta.tar.gz: OK
+S1_Z05_fixed.fasta.tar.gz: OK
+S20_Z00_fixed.fasta.tar.gz: OK
+S20_Z01_fixed.fasta.tar.gz: OK
+S20_Z03_fixed.fasta.tar.gz: OK
+S20_Z05_fixed.fasta.tar.gz: OK
+S20_Z07_fixed.fasta.tar.gz: OK
+S20_Z09_fixed.fasta.tar.gz: OK
+S21_Z00_fixed.fasta.tar.gz: OK
+S21_Z01_fixed.fasta.tar.gz: OK
+S21_Z05_fixed.fasta.tar.gz: OK
+S21_Z07_fixed.fasta.tar.gz: OK
+S21_Z09_fixed.fasta.tar.gz: OK
+S24_Z00_fixed.fasta.tar.gz: OK
+S24_Z01_fixed.fasta.tar.gz: OK
+S24_Z03_fixed.fasta.tar.gz: OK
+S24_Z05_fixed.fasta.tar.gz: OK
+S24_Z07_fixed.fasta.tar.gz: OK
+S24_Z09_fixed.fasta.tar.gz: OK
+S25_Z00_fixed.fasta.tar.gz: OK
+S25_Z01_fixed.fasta.tar.gz: OK
+S25_Z03_fixed.fasta.tar.gz: OK
+S25_Z05_fixed.fasta.tar.gz: OK
+S25_Z07_fixed.fasta.tar.gz: OK
+S25_Z09_fixed.fasta.tar.gz: OK
+S26_Z00_fixed.fasta.tar.gz: OK
+S26_Z01_fixed.fasta.tar.gz: OK
+S26_Z03_fixed.fasta.tar.gz: OK
+S26_Z05_fixed.fasta.tar.gz: OK
+S26_Z07_fixed.fasta.tar.gz: OK
+S26_Z09_fixed.fasta.tar.gz: OK
+S27_Z00_fixed.fasta.tar.gz: OK
+S27_Z01_fixed.fasta.tar.gz: OK
+S27_Z03_fixed.fasta.tar.gz: OK
+S27_Z05_fixed.fasta.tar.gz: OK
+S27_Z07_fixed.fasta.tar.gz: OK
+S27_Z09_fixed.fasta.tar.gz: OK
+S28_Z00_fixed.fasta.tar.gz: OK
+S28_Z01_fixed.fasta.tar.gz: OK
+S28_Z03_fixed.fasta.tar.gz: OK
+S28_Z05_fixed.fasta.tar.gz: OK
+S28_Z07_fixed.fasta.tar.gz: OK
+S28_Z09_fixed.fasta.tar.gz: OK
+S29_Z00_fixed.fasta.tar.gz: OK
+S29_Z01_fixed.fasta.tar.gz: OK
+S29_Z03_fixed.fasta.tar.gz: OK
+S29_Z05_fixed.fasta.tar.gz: OK
+S29_Z07_fixed.fasta.tar.gz: OK
+S29_Z09_fixed.fasta.tar.gz: OK
+S2_Z00_fixed.fasta.tar.gz: OK
+S2_Z01_fixed.fasta.tar.gz: OK
+S2_Z03_fixed.fasta.tar.gz: OK
+S2_Z05_fixed.fasta.tar.gz: OK
+S30_Z00_fixed.fasta.tar.gz: OK
+S30_Z01_fixed.fasta.tar.gz: OK
+S30_Z03_fixed.fasta.tar.gz: OK
+S30_Z05_fixed.fasta.tar.gz: OK
+S30_Z07_fixed.fasta.tar.gz: OK
+S30_Z09_fixed.fasta.tar.gz: OK
+S31_Z00_fixed.fasta.tar.gz: OK
+S31_Z01_fixed.fasta.tar.gz: OK
+S31_Z03_fixed.fasta.tar.gz: OK
+S31_Z05_fixed.fasta.tar.gz: OK
+S31_Z07_fixed.fasta.tar.gz: OK
+S31_Z09_fixed.fasta.tar.gz: OK
+S32_Z00_fixed.fasta.tar.gz: OK
+S32_Z01_fixed.fasta.tar.gz: OK
+S32_Z03_fixed.fasta.tar.gz: OK
+S32_Z05_fixed.fasta.tar.gz: OK
+S32_Z07_fixed.fasta.tar.gz: OK
+S32_Z09_fixed.fasta.tar.gz: OK
+S33_Z00_fixed.fasta.tar.gz: OK
+S33_Z01_fixed.fasta.tar.gz: OK
+S33_Z03_fixed.fasta.tar.gz: OK
+S33_Z05_fixed.fasta.tar.gz: OK
+S33_Z07_fixed.fasta.tar.gz: OK
+S33_Z09_fixed.fasta.tar.gz: OK
+S34_Z00_fixed.fasta.tar.gz: OK
+S34_Z01_fixed.fasta.tar.gz: OK
+S34_Z03_fixed.fasta.tar.gz: OK
+S34_Z05_fixed.fasta.tar.gz: OK
+S34_Z07_fixed.fasta.tar.gz: OK
+S34_Z09_fixed.fasta.tar.gz: OK
+S3_Z00_fixed.fasta.tar.gz: OK
+S3_Z01_fixed.fasta.tar.gz: OK
+S3_Z03_fixed.fasta.tar.gz: OK
+S3_Z05_fixed.fasta.tar.gz: OK
+S4_Z00_fixed.fasta.tar.gz: OK
+S4_Z01_fixed.fasta.tar.gz: OK
+S4_Z05_fixed.fasta.tar.gz: OK
+S5_Z00_fixed.fasta.tar.gz: OK
+S5_Z01_fixed.fasta.tar.gz: OK
+S5_Z05_fixed.fasta.tar.gz: OK
+S5_Z07_fixed.fasta.tar.gz: OK
+S5_Z08_fixed.fasta.tar.gz: OK
+S5_Z08X_fixed.fasta.tar.gz: OK
+S5_Z09_fixed.fasta.tar.gz: OK
+S6_Z00_fixed.fasta.tar.gz: OK
+S6_Z05_fixed.fasta.tar.gz: OK
+S7_Z00_fixed.fasta.tar.gz: OK
+S7_Z01_fixed.fasta.tar.gz: OK
+S7_Z03_fixed.fasta.tar.gz: OK
+S7_Z05_fixed.fasta.tar.gz: OK
+S8_Z00_fixed.fasta.tar.gz: OK
+S8_Z01_fixed.fasta.tar.gz: OK
+S8_Z03_fixed.fasta.tar.gz: OK
+S8_Z05_fixed.fasta.tar.gz: OK
+S9_Z00_fixed.fasta.tar.gz: OK
+S9_Z01_fixed.fasta.tar.gz: OK
+S9_Z03_fixed.fasta.tar.gz: OK
+S9_Z05_fixed.fasta.tar.gz: OK
+
+# make DRAMv directories
+
+mkdir processed-data/DRAMv/
+
+cat assemblies.conf | while read line; do mkdir processed-data/DRAMv/$line/; done

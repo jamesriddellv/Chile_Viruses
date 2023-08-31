@@ -1,0 +1,15 @@
+WARNING: Environment variable LD_PRELOAD already has value [], will not forward new value [/apps/xalt/xalt/lib64/libxalt_init.so] from parent process environment
+Create self BLAST database
+
+
+Building a new DB, current time: 08/30/2023 12:21:02
+New DB name:   /fs/ess/PAS1117/riddell26/Chile_Viruses/processed-data/vOTU-clustering/combined-final-viral-scored.fa.db
+New DB title:  ../processed-data/vOTU-clustering/combined-final-viral-scored.fa
+Sequence type: Nucleotide
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 404664 sequences in 31.0849 seconds.
+
+
+Running all-verses-all pairwise BLAST
+slurmstepd: error: *** JOB 23712776 ON p0645 CANCELLED AT 2023-08-30T16:20:22 DUE TO TIME LIMIT ***

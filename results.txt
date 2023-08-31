@@ -1,0 +1,22 @@
+1.	Viral identification done with VS2, CheckV, VS2, DRAMv, VS2-SOP-SCREEN filtering as shown in https://www.protocols.io/view/viral-sequence-identification-sop-with-virsorter2-5qpvoyqebg4o/v3?version_warning=no
+2.	Clustering performed with CheckV’s supporting code ANICalc and ANIClust, clustered at 95% ANI 85% AF as recommended by the MIUVIG guidelines. Check https://bitbucket.org/berkeleylab/checkv/src/master/ under “supporting code” for details.
+3.	Determination of Novel Clusters was achieved by clustering all Chile vOTUs with GOV2 vOTUs identified by the VS2 SOP, using the same method as step 2. 662484 total contigs were clustered (145200 from Chile, 517284 from GOV2) resulting in 645116 vOTU clusters. When sorting the cluster table for groups that only contained chile vOTUs, there were 131222 clusters observed. A quality check was done by also looking at how many clusters contained a chile vOTU and the number was smaller than the total number of vOTUs, but larger than the chile-exclusive clusters.
+
+
+unclustered contigs Average Length: 10941.7
+404664
+Sorted Data:
+Minimum: 4859
+Maximum: 384375
+25th Percentile: 5927
+50th Percentile: 7565
+75th Percentile: 11433
+
+chile-vOTUs Average Length: 11328.4
+145200
+Sorted Data:
+Minimum: 4879
+Maximum: 384375
+25th Percentile: 5923
+50th Percentile: 7595
+75th Percentile: 11666
