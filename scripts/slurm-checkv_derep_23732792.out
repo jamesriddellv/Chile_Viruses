@@ -1,0 +1,35 @@
+WARNING: Environment variable LD_PRELOAD already has value [], will not forward new value [/apps/xalt/xalt/lib64/libxalt_init.so] from parent process environment
+Create self BLAST database
+
+
+Building a new DB, current time: 08/30/2023 19:30:48
+New DB name:   /fs/ess/PAS1117/riddell26/Chile_Viruses/processed-data/vOTU-clustering/combined-final-viral-scored.fa.db
+New DB title:  ../processed-data/vOTU-clustering/combined-final-viral-scored.fa
+Sequence type: Nucleotide
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 404664 sequences in 31.6469 seconds.
+
+
+Running all-verses-all pairwise BLAST
+Calculating pairwise ANI
+Running clustering on ../processed-data/vOTU-clustering/combined-final-viral-scored.fa.self-blastn.ani.tsv using aniclust.py
+
+reading sequences...
+404664 sequences retained from fna
+time: 20.12 seconds, peak RAM: 0.12 GB
+
+storing edges...
+1988703 edges retained from blastani
+1988703 edges currently stored
+time: 217.28 seconds, peak RAM: 0.34 GB
+
+clustering...
+145200 total clusters
+time: 217.69 seconds, peak RAM: 0.36 GB
+
+writing clusters...
+time: 217.78 seconds, peak RAM: 0.36 GB
+Parsing clusters: Building list of representatives
+Parsing clusters: Writing 145200 records to f../processed-data/vOTU-clustering/combined-final-viral-scored.fa.self-blastn.clusters.fna
+Dereplicated 404664 sequences into 145200 cluster representatives
